@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+{/*import React, {Component} from 'react';
 import Slider from 'react-rangeslider';
 
 class ParameterSlider extends Component {
@@ -33,4 +33,4 @@ class ParameterSlider extends Component {
     }
 }
 
-export default ParameterSlider;
+export default ParameterSlider;*/}
