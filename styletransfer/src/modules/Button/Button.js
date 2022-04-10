@@ -1,4 +1,5 @@
 import React from 'react';
+import { ButtonType } from '../theme';
 
 {/*Button Props:
 - bgColor
@@ -7,16 +8,16 @@ import React from 'react';
 - icon
 - buttonText
 */}
-const Button = (props) => {
-    const buttonStyle = 'bg-['+props.bgColor+'] hover:bg-['+props.bgColorHover+'] flex justify-center p-2 gap-x-2 mr-5 rounded-md border-['+props.borderColor+'] text-['+props.textColor+']';
-    console.log(buttonStyle);
-    return (<button type={props.type} className={buttonStyle}>
+const Button = ({actionType, buttonType, buttonText, icon}) => {
+    //const buttonStyle = classnames(`bg-[${props.bgColor}] hover:bg-[${props.bgColorHover}] flex justify-center p-2 gap-x-2 mr-5 rounded-md border-[${props.borderColor}] text-[${props.textColor}]`);
+    //console.log(buttonStyle);
+    return (<button type={actionType} className={ButtonType[buttonType]}>
         {/*Download icon*/}
         <span className='pt-1'>
-            <img src={props.icon} alt='icon' />
+            <img src={icon} alt='icon' />
         </span>
         <span>
-            {props.buttonText}
+            {buttonText}
         </span>
     </button>)
 };

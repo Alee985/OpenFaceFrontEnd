@@ -18,9 +18,10 @@ const ParameterInputForm = () => {
         },
     });
 
+    const labelStyle = `text-md font-semibold text-gray-700`;
     return (
-        <form onSubmit={formik.handleSubmit}>
-            <label htmlFor='totalVariationWeight'>Total Variation Weight</label>
+        <form onSubmit={formik.handleSubmit} className='flex flex-col gap-y-2'>
+            <label className={labelStyle} htmlFor='totalVariationWeight'>Total Variation Weight</label>
             <input
                 id='totalVariationWeight'
                 name='totalVariationWeight'
@@ -29,7 +30,7 @@ const ParameterInputForm = () => {
                 value={formik.values.totalVariationWeight} 
             />
 
-            <label htmlFor='styleWeight'>Style Weight</label>
+            <label className={labelStyle} htmlFor='styleWeight'>Style Weight</label>
             <input
                 id='styleWeight'
                 name='styleWeight'
@@ -38,7 +39,7 @@ const ParameterInputForm = () => {
                 value={formik.values.styleWeight} 
             />
 
-            <label htmlFor='contentWeight'>Content Weight</label>
+            <label className={labelStyle} htmlFor='contentWeight'>Content Weight</label>
             <input
                 id='contentWeight'
                 name='contentWeight'
@@ -47,7 +48,7 @@ const ParameterInputForm = () => {
                 value={formik.values.contentWeight} 
             />
 
-            <label htmlFor='iterations'>Itertions to Run</label>
+            <label className={labelStyle} htmlFor='iterations'>Itertions to Run</label>
             <input
                 id='iterations'
                 name='iterations'
@@ -56,7 +57,7 @@ const ParameterInputForm = () => {
                 value={formik.values.iterations} 
             />
 
-            <label htmlFor='stepsPerIteration'>Steps per Iteration</label>
+            <label className={labelStyle} htmlFor='stepsPerIteration'>Steps per Iteration</label>
             <input
                 id='stepsPerIteration'
                 name='stepsPerIteration'
@@ -65,7 +66,7 @@ const ParameterInputForm = () => {
                 value={formik.values.stepsPerIteration} 
             />
 
-            <label htmlFor='imageWidth'>Image Width</label>
+            <label className={labelStyle} htmlFor='imageWidth'>Image Width</label>
             <input
                 id='imageWidth'
                 name='imageWidth'
@@ -74,7 +75,7 @@ const ParameterInputForm = () => {
                 value={formik.values.imageWidth} 
             />
 
-            <label htmlFor='imageHeight'>Image Height</label>
+            <label className={labelStyle} htmlFor='imageHeight'>Image Height</label>
             <input
                 id='imageHeight'
                 name='imageHeight'
