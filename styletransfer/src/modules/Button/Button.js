@@ -8,10 +8,10 @@ import { ButtonType } from '../theme';
 - icon
 - buttonText
 */}
-const Button = ({actionType, buttonType, buttonText, icon}) => {
+const Button = ({onClick, actionType, buttonType, buttonText, icon}) => {
     //const buttonStyle = classnames(`bg-[${props.bgColor}] hover:bg-[${props.bgColorHover}] flex justify-center p-2 gap-x-2 mr-5 rounded-md border-[${props.borderColor}] text-[${props.textColor}]`);
     //console.log(buttonStyle);
-    return (<button type={actionType} className={ButtonType[buttonType]}>
+    return (<button onClick={onClick} type={actionType} className={ButtonType[buttonType]}>
         {/*Download icon*/}
         <span className='pt-1'>
             <img src={icon} alt='icon' />

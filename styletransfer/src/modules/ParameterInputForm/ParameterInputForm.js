@@ -1,6 +1,7 @@
 import React from 'react';
 import {useFormik} from 'formik';
 import SubmitButton from '../RightPanel/SubmitButton';
+import axios from 'axios';
 
 const ParameterInputForm = () => {
     const initialValues = {totalVariationWeight: '',
@@ -23,6 +24,8 @@ const ParameterInputForm = () => {
         initialValues: initialValues,
         onSubmit: values => {
             alert(JSON.stringify(values, null, 2));
+            axios.post('http://localhost:4000', values);
+            console.log(JSON.stringify(values,null,2));
         },
     });
 
