@@ -1,1 +1,1 @@
-web: node server/server.js
+web: concurrently \"npm run start-server\" \"npm run start-front\" --kill-others
