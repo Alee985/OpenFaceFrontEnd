@@ -6,7 +6,7 @@ app.use(express.urlencoded({extended:true}));
 const cors = require('cors');
 app.use(cors());
 const path = require('path');
-const publicPath = path.join(__dirname, 'public');
+const publicPath = path.join(__dirname, 'build');
 app.use(express.static(publicPath));
 
 // Setup port
