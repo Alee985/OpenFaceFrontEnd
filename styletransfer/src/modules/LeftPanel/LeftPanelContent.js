@@ -5,7 +5,7 @@ import UploadButton from './UploadButton';
 import HiddenInputField from './HiddenInputField';
 
 const LeftPanelContent = () => {
-    const {imageRef, defaultImage, showOpenFileDialogue, handleChange} = ImageUpload();
+    const {imageRef, showOpenFileDialogue, handleChange} = ImageUpload();
     const imageClasses = ['Content', 'Style'];
     
     let panelContent = imageClasses.map(imageClass => (

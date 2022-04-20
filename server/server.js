@@ -5,13 +5,16 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 const cors = require('cors');
 app.use(cors());
+const path = require('path');
+const publicPath = path.join(__dirname, 'public');
+app.use(express.static(publicPath));
+
 // Setup port
 PORT = 4000 || process.env.PORT
-app.post('/', (req, res) => {
-            res.json(req.body);
-            console.log("YOLO");
-            console.log(req.body);
-        });
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(publicPath, 'index.html'));
+});
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {

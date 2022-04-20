@@ -52,7 +52,6 @@ const ImageUpload = () => {
         }    
     }, [image]
     );
-
     return {
         imageRef,
         defaultImage,
