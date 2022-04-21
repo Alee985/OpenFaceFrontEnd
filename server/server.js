@@ -10,7 +10,7 @@ const publicPath = path.join(__dirname, 'build');
 app.use(express.static(publicPath));
 
 // Setup port
-PORT = 4000 || process.env.PORT
+PORT = process.env.PORT || 4000;
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
