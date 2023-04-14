@@ -13,16 +13,14 @@ const LiveView = () => {
     
     useEffect(() => {
         setStyleImage(defaultImage);
+        console.log("defaultImage changed:", defaultImage);
     }, [defaultImage]);
     
     return(
     <div className='flex flex-col flex-grow h-full'>
-        <div className='flex flex-row basis-1/2'>
+        <div className='flex flex-row basis-1/2 justify-center items-center'>
             <div className='glassBox'>
                 <ImageView image={styleImage} />
-            </div>
-            <div className='glassBox'>
-                <ImageView image={styleImage}/>
             </div>
         </div>
         <div className='glassBox'>

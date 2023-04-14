@@ -3,7 +3,7 @@ import generateLogo from './resources/Scan.svg'
 import Button from '../Button/Button';
 
 const SubmitButton = () => (
-    <Button actionType='submit' buttonType='purple' icon={generateLogo} buttonText='Generate'/>
+    <Button actionType='submit' buttonType='purple' icon={generateLogo} buttonText='START'/>
 );
 
 export default SubmitButton;
