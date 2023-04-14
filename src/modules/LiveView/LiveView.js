@@ -13,7 +13,6 @@ const LiveView = () => {
     
     useEffect(() => {
         setStyleImage(defaultImage);
-        console.log("defaultImage changed:", defaultImage);
     }, [defaultImage]);
     
     return(

@@ -26,7 +26,7 @@ const ImageUpload = () => {
     const uploadFile = async (file) => {
         const formData = new FormData();
         formData.append('file', file)
-        console.log(formData);
+        console.log("Formdata printing"+formData);
         try {
             const res = await axios.post(
                 'http://localhost:4000/upload',
